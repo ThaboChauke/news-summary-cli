@@ -13,12 +13,12 @@ def get_news(api_key):
 
 
 def process_news(news):
-
+    headlines = []
     results = news.json().get("results")
+    for result in results:
+        headlines.append(dict(title=result["title"], url=result["link"]))
 
-
-
-    pass
+    return headlines
 
 
 def main():
