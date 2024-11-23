@@ -21,14 +21,14 @@ def main():
     news = get_news(news_api_key)
     headlines = process_news(news)
 
-    print("\n---------------------------->Latest Headlines<----------------------------\n")
+    print("\n----------------------------> Latest South African News <----------------------------\n")
 
     for headline in enumerate(headlines, start=1):
 
         print(headline[0] , ". HEADLINE: " + headline[1].get("title") + "\n"
               + "LINK TO ARTICLE: " + headline[1].get("url") + "\n")
 
-    print("\n---------------------------->END<----------------------------\n")
+    print("\n----------------------------> END <----------------------------\n")
 
 if __name__ == "__main__":
     main()
